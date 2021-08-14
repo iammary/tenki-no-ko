@@ -1,0 +1,25 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    "istanbul",
+    [
+      "inline-react-svg",
+      {
+        "root": ".",
+        "alias": {
+          "@assets": "./src/assets"
+        }
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "@assets": "./src/assets"
+        }
+      }
+    ],
+    ["styled-components", { "ssr": true }]
+  ]
+}

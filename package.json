@@ -1,0 +1,71 @@
+{
+  "name": "tenki-no-ko",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint:staged": "lint-staged",
+    "lint": "next lint",
+    "cypress": "npx cypress open",
+    "cypress-ct": "npx cypress open-ct",
+    "ct": "npx cypress run-ct"
+  },
+  "author": "Jes Anub",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "pre-commit": "lint:staged",
+  "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@material-ui/styles": "^4.11.4",
+    "axios": "^0.21.1",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-content-loader": "^6.0.3",
+    "react-dom": "^17.0.2",
+    "react-sweet-state": "^2.5.2",
+    "styled-components": "^5.3.0",
+    "use-places-autocomplete": "^1.9.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@cypress/code-coverage": "^3.9.10",
+    "@cypress/react": "^5.9.4",
+    "@cypress/webpack-dev-server": "^1.4.0",
+    "@testing-library/cypress": "^8.0.0",
+    "@types/react": "17.0.4",
+    "@types/react-dom": "17.0.3",
+    "@types/styled-components": "^5.1.11",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-inline-react-svg": "^2.0.1",
+    "babel-plugin-istanbul": "^6.0.0",
+    "babel-plugin-styled-components": "^1.13.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "cypress": "^8.2.0",
+    "eslint": "^7.29.0",
+    "eslint-config-next": "^11.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "html-webpack-plugin": "^5.3.2",
+    "lint-staged": "^11.0.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.3.1",
+    "typescript": "^4.3.4",
+    "webpack": "^5.50.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "license": "MIT"
+}
