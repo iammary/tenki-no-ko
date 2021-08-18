@@ -9,7 +9,7 @@ const WeatherCardsLoader: React.FC = () => {
     <>
       {[...Array(3).keys()].map((item) => (
         <Grid item xs={12} sm={4} key={item}>
-          <Card>
+          <Card data-qa="qa_weather-loading">
             <CardContent>
               <Loader />
             </CardContent>

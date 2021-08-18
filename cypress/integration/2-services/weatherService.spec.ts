@@ -12,10 +12,9 @@ describe('Weather service', () => {
     )
   })
 
-  it(`gets 3-day weather forecast for city: "${search.cityFullName}" when days parameter is not set`, () => {
-    return getWeatherForecast(search.cityFullName, undefined, Cypress.env('WEATHER_API_KEY')).then(
+  it(`gets 3-day weather forecast for city: "${search.city}" when days parameter is not set`, () => {
+    return getWeatherForecast(search.city, undefined, Cypress.env('WEATHER_API_KEY')).then(
       (result: { data: Weather }) => {
-        expect(result.data.location.name).to.equal(search.city)
         expect(result.data.forecast.forecastday.length).to.equal(search.count)
       }
     )

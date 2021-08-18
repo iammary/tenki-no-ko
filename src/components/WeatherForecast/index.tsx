@@ -29,7 +29,7 @@ const WeatherForecast: React.FC<WeatherForecastProps> = ({ isFetching, hasError,
           return <WeatherCardsLoader />
         }
         if (hasError) {
-          return <div>Error</div>
+          return <div data-qa="qa_weather-error">Error</div>
         }
         if (forecast && tz) {
           return <WeatherCards forecast={forecast} tz={tz} />
