@@ -43,11 +43,13 @@ npm run build
 
 - [nextjs boilerplate](https://github.com/iammary/nextjs-typescript-materialui-styled-components-starter) - my
   personal template to start a nextjs project
-- [styled components](https://www.styled-components.com/) - Utilising tagged template literals (a recent addition to JavaScript) and the power of CSS, styled-components allows you to write actual CSS code to style your components.
+- [styled components](https://www.styled-components.com/) - Utilising tagged template literals and the power of CSS, 
+  styled-components allows you to write actual CSS code to style your components.
 - [axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
 - [react-content-loader](https://github.com/danilowoz/react-content-loader) - SVG-Powered component to easily create placeholder loadings (like Facebook's cards loading).
 - [moment-timezone](https://momentjs.com/timezone/) - format epoch time to searched city's timezone
 - [use-places-autocomplete](https://use-places-autocomplete.netlify.app/) - a React hook for Google Maps Places Autocomplete
+- [react-sweet-state](https://github.com/atlassian/react-sweet-state) - shared state management solution for React
 
 ### Cypress integration and Component Testing
 
@@ -61,6 +63,8 @@ Test coverage is automatically generated to the `coverage` directory when compon
 ```bash
 npm run cypress
 ```
+
+*Note: for cypress integration test to run, please make sure you have filled out .env file for NEXT_PUBLIC_WEATHER_API_KEY*
 
 #### Run component testing
 

@@ -5,13 +5,17 @@ import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
 import { ThemeProvider } from 'styled-components'
 import React from 'react'
 
-it('SearchPlaces', () => {
-  mount(
-    <ThemeProvider theme={theme}>
-      <MuiThemeProvider theme={theme}>
-        <SearchPlaces onChange={() => {}} />
-      </MuiThemeProvider>
-    </ThemeProvider>
-  )
-  cy.get('#places-search-label').contains('Search city')
+// Gotchas: Google AutoComplete tested using integration test
+// Google Places Autocomplete requires a script to be inserted inside <Head/>
+describe('SearchPlaces', () => {
+  it('Display search field', () => {
+    mount(
+      <ThemeProvider theme={theme}>
+        <MuiThemeProvider theme={theme}>
+          <SearchPlaces onChange={() => {}} />
+        </MuiThemeProvider>
+      </ThemeProvider>
+    )
+    cy.get('#places-search-label').contains('Search city')
+  })
 })

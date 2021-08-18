@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 
+// @ts-ignore
 describe('The Document Metadata', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000')

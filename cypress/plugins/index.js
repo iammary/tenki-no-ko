@@ -13,12 +13,18 @@
 // the project's config changing)
 const injectNextDevServer = require('@cypress/react/plugins/next')
 const codeCoverageTask = require('@cypress/code-coverage/task')
+require('dotenv').config()
 
 /**
  * @type {Cypress.PluginConfig}
  */
 // eslint-disable-next-line no-unused-vars
 module.exports = (on, config) => {
+  // we can grab some process environment variables
+  // and stick it into config.env before returning the updated config
+  config.env = config.env || {}
+  config.env.WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY
+
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
   if (config.testingType === 'component') {

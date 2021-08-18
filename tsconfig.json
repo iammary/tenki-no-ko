@@ -31,6 +31,7 @@
       "@utils": ["src/utils"],
       "@utils/*": ["src/utils/*"],
       "@theme": ["src/theme"],
+      "@api/*": ["src/api/*"],
       "@assets/*": ["src/assets/*"],
       "@stores/*": ["src/stores/*"],
     }
